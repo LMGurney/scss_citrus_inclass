@@ -9,7 +9,7 @@ $font-link-followed:rgba(255, 255, 255, 0.2);
 $font-link-focus:rgba(255, 255, 255, 0.4);
 
 $font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-$secondary-font-famiy:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+$secondary-font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 $minmargin: 0;
 $minpadding:0;
 $floatmargin:0 auto;
@@ -19,6 +19,125 @@ $font-medium: 18px;
 $font-large:20px;
 $font-super:36px;
 
+article, aside, footer, header, nav, section, body{
+    margin: $minmargin;
+    padding: $minpadding;
+}
+
+body{
+    font-family: $font-family;
+    color: $darktext-color;
+    background-color: $primary-color;
+}
+#container{
+    max-width: 840px;
+    margin: $floatmargin;
+}
+header{ 
+    height: 200px;
+}
+#maincontent{
+    margin-top: 80px;
+    padding: 10px 0;
+}
+
+h1, h2{
+    color:$darktext-color;
+}
+ul, h1, h2{
+    margin: $minmargin;
+    padding: $minpadding;
+}
+
+//mixin
+@mixin navMenu{
+    ul{
+        list-style: none;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: $font-large;
+    }
+    li{
+        float:left;
+    }
+    a{
+        display: block;
+        width: 140px;
+        padding:10px;
+        text-align: center;
+        text-decoration: none;
+        color: $tertiary-color;
+        border: 1px solid $secondary-color;
+        margin: 5px 0;
+        border-radius: 8px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.80);
+        text-shadow: 1px 1px 3px rgba(0,0,0,.80);
+    
+    &:hover, &:active, &:focus{
+        background-color: $font-link-focus;
+        margin-top: -10px;
+      }
+    &:link, &:visited{
+        background-color: $font-link-followed;
+        }
+    }
+}
+
+#vision{
+    font-family: $secondary-font-family;
+    font-size: $font-super;
+    font-weight: bold;
+    line-height: 1.2;
+    background-image: url("../images/lrg_hero.jpg");
+    background-repeat: no-repeat;
+    height: 297px;
+    width:409px;
+    padding:60px 370px 0 40px;
+    margin-bottom: 20px;
+}
+
+@mixin pod{
+    background-color: $tertiary-color;
+    padding: 10px;
+    width: 244px;
+    float: left;
+    margin-right: 13px;
+
+    .podContent{
+        margin-top: 10px;
+        width: 244px;
+        height: 180px;
+        background-color:yellow;
+        overflow: hidden;
+
+        #news & {
+            margin-top: 12px;
+            overflow: auto;
+        }
+        p{
+            margin: 0 5px;
+            font-size: 15px;
+        }
+    }
+
+}
+
+
+nav{
+    @include navMenu();
+}
+.pod{
+    @include pod;
+}
+footer{
+    clear:both;
+    padding: 20px;
+    color: $tertiary-color;
+    p{
+        margin:0 0 5px 0;
+        color:black;
+    }
+}
 
 
 //watch the compile live

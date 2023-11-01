@@ -1,0 +1,109 @@
+article, aside, footer, header, nav, section, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #000;
+  background-color: #66B034;
+}
+
+#container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+header {
+  height: 200px;
+}
+
+#maincontent {
+  margin-top: 80px;
+  padding: 10px 0;
+}
+
+h1, h2 {
+  color: #000;
+}
+
+ul, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#vision {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  background-image: url("../images/lrg_hero.jpg");
+  background-repeat: no-repeat;
+  height: 297px;
+  width: 409px;
+  padding: 60px 370px 0 40px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+nav li {
+  float: left;
+}
+nav a {
+  display: block;
+  width: 140px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #618A37;
+  margin: 5px 0;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+nav a:hover, nav a:active, nav a:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: -10px;
+}
+nav a:link, nav a:visited {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pod {
+  background-color: #fff;
+  padding: 10px;
+  width: 244px;
+  float: left;
+  margin-right: 13px;
+}
+.pod .podContent {
+  margin-top: 10px;
+  width: 244px;
+  height: 180px;
+  background-color: yellow;
+  overflow: hidden;
+}
+#news .pod .podContent {
+  margin-top: 12px;
+  overflow: auto;
+}
+.pod .podContent p {
+  margin: 0 5px;
+  font-size: 15px;
+}
+
+footer {
+  clear: both;
+  padding: 20px;
+  color: #fff;
+}
+footer p {
+  margin: 0 0 5px 0;
+  color: black;
+}/*# sourceMappingURL=citrus.css.map */
